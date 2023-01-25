@@ -25,7 +25,7 @@ SMILEYICON = [[None, None, None, None, None, '[255, 255, 0, 255]', '[255, 255, 0
     The center row/column for even numbers is really (length / 2), but it's works out better with the equation above (I think)
 '''
 SMILEYDATA = (15, 15, 8, 8)
-HYPOTHETICALDATA = (10, 10, 6, 6)
+HYPOTHETICALEVENDATA = (10, 10, 6, 6)
 
 def iconsOverlap(sheet, x, y, iconData):
     for row in range(y, y + iconData[0]):
@@ -33,9 +33,7 @@ def iconsOverlap(sheet, x, y, iconData):
             if sheet.cell(row, column).value != None:
                 print(f'Icon overlaps another at cell {row} {column}')
                 return True
-
     return False
-
 
 
 def placeIcon(sheet, x, y, icon, iconData):
@@ -53,12 +51,12 @@ def placeIcon(sheet, x, y, icon, iconData):
                 j += 1
             j = 0
             i += 1
-        workBook.save('C:\\Users\\josh\\Documents\\pypngtest.xlsx') # Enter a path to a valid excel file here. Also, the excel sheet can't be opened while saving takes place
+        workBook.save('C:\\Users...foo.xlsx') # Enter a path to a valid excel file here. Also, the excel sheet can't be opened while saving takes place
         print('Icon recorded successfully!')
 
 
 if __name__=='__main__':
-    workBook = openpyxl.load_workbook('C:\\Users\\josh\\Documents\\pypngtest.xlsx') # Enter a path to a valid excel file here
+    workBook = openpyxl.load_workbook('C:\\Users...foo.xlsx') # Enter a path to a valid excel file here
     sheet = workBook.active
 
     placeIcon(sheet, 600, 400, SMILEYICON, SMILEYDATA)
