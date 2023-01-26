@@ -1,2 +1,2 @@
 # A-Thousand-Crowns
-My contributions to automating the ATC server
+My contributions for automating the ATC server
